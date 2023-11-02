@@ -20,7 +20,7 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg);
-    animation: spin 10s infinite linear;
+    animation: spin 10s infinite linear, colorShift 10s infinite linear;
 }
 
 .face {
@@ -29,19 +29,6 @@ body {
     width: 200px;
     background: linear-gradient(45deg, #f06, #ff0);
     border: 1px solid #ccc;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.cube:hover {
-    transform: rotateX(0deg) rotateY(0deg) scale(1.1); /* Adjust the transform for the entire cube */
-}
-
-.face {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background: linear-gradient(45deg, #f06, #ff0);
-    border: 1px solid #777;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -58,5 +45,23 @@ body {
     }
     to {
         transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        background: linear-gradient(45deg, #f06, #ff0);
+    }
+    25% {
+        background: linear-gradient(45deg, #ff0, #0f6);
+    }
+    50% {
+        background: linear-gradient(45deg, #0f6, #f60);
+    }
+    75% {
+        background: linear-gradient(45deg, #f60, #60f);
+    }
+    100% {
+        background: linear-gradient(45deg, #60f, #f06);
     }
 }
