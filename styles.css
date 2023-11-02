@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #191919;
+    background-color: #0e0e0e;
     margin: 0;
     overflow: hidden;
 }
@@ -27,8 +27,13 @@ body {
     position: absolute;
     height: 200px;
     width: 200px;
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(45deg, #f06, #ff0);
     border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.face:hover {
+    transform: scale(1.1);
 }
 
 .front  { transform: rotateY(0deg) translateZ(100px); }
