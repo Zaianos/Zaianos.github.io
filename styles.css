@@ -33,7 +33,9 @@ body {
 }
 
 .face:hover {
-    transform: scale(1.1);
+    transform: translateZ(110px); /* Move the face closer to the user perspective */
+    background: linear-gradient(45deg, #f00, #f60); /* Change the background color */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Increase shadow */
 }
 
 .front  { transform: rotateY(0deg) translateZ(100px); }
