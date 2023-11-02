@@ -32,10 +32,17 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.face:hover {
-    transform: translateZ(110px); /* Move the face closer to the user perspective */
-    background: linear-gradient(45deg, #f00, #f60); /* Change the background color */
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Increase shadow */
+.cube:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.1); /* Adjust the transform for the entire cube */
+}
+
+.face {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(45deg, #f06, #ff0);
+    border: 1px solid #777;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .front  { transform: rotateY(0deg) translateZ(100px); }
